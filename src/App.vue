@@ -1,26 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <AppTopBar />
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AppTopBar from "@/components/TopBar";
+import { actionTypes } from '@/store/modules/auth'
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    AppTopBar,
+  },
+  mounted() {
+    this.$store.dispatch(actionTypes.getCurrentUser)
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
