@@ -1,4 +1,4 @@
-# vue_project
+# [vue_medium_pepega_clone](http://wakefuckinupsamurai.surge.sh/)
 
 ## Project setup
 ```
